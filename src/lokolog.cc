@@ -1,4 +1,5 @@
 #include "lokolog.h"
+#include  <gflags/gflags.h>
 
 namespace loko{
 

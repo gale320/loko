@@ -3,11 +3,12 @@ project(loko CXX C)
 
 include(cmake/option.cmake)
 include(cmake/glog.cmake)
+include(cmake/glog.cmake)
 include(cmake/opencv.cmake)
 include(cmake/boost.cmake)
 
 
-
+include_directories(src)
 link_directories(/usr/local/lib )
 
 add_subdirectory(src)
