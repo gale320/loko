@@ -8,6 +8,8 @@ include(cmake/boost.cmake)
 
 
 
+link_directories(/usr/local/lib )
+
 add_subdirectory(src)
 add_subdirectory(app)
 add_subdirectory(test)
