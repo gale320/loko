@@ -4,7 +4,7 @@ namespace loko{
 
 LokoCore::LokoCore()
 {
-
+    mupdf = new LokoMupdf;
 }
 
 LokoCore::~LokoCore()
@@ -28,7 +28,9 @@ bool LokoCore::Handle(LokoCmd * cmd)
     std::string cmdStr = cmd->GetCmd();
     if(cmdStr == "open")
     {
-
+        std::string str1 = cmd->GetCmd();
+        mupdf->SetFile(str1);
+        mupdf->Open();
     }
     else 
     {
