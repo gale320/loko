@@ -9,6 +9,7 @@ class LokoMupdf{
     public:
         LokoMupdf();
         ~LokoMupdf();
+        
 };
 
 }

@@ -7,6 +7,7 @@ int main(int argc, char ** argv)
 {
     std::cout << "start application " << std::endl;
     LokoLogInit();
+    LOG(INFO) << "start application";
 
 
     LokoLogDeinit();
