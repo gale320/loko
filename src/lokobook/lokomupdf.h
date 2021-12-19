@@ -20,6 +20,7 @@ class LokoMupdf{
         fz_context *ctx;
         fz_document *doc;
         fz_pixmap *pix;
+        fz_outline * outline;
         fz_matrix ctm;    
         float zoom, rotate;
         

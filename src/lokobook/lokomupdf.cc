@@ -25,6 +25,7 @@ LokoMupdf::~LokoMupdf()
     if(ctx && pix)
     {
         fz_drop_pixmap(ctx, pix);
+		fz_drop_outline(ctx, outline);
 	    fz_drop_document(ctx, doc);
 	    fz_drop_context(ctx);
     }
@@ -57,7 +58,10 @@ bool LokoMupdf::Open()
 
     LOG(INFO) << "get page count";
     fz_try(ctx)
+	{
 		page_count = fz_count_pages(ctx, doc);
+		LOG(INFO) << "page count is " << page_count;
+	}
 	fz_catch(ctx)
 	{
 		fprintf(stderr, "cannot count number of pages: %s\n", fz_caught_message(ctx));
@@ -65,6 +69,13 @@ bool LokoMupdf::Open()
 		fz_drop_context(ctx);
 		//return EXIT_FAILURE;
 	}
+
+	outline = fz_load_outline(ctx, doc);
+	if(outline)
+	{
+		LOG(INFO) << "get outline success"; 
+	}
+
 
     LOG(INFO) << "leave " << __func__;
     return ret;
