@@ -10,7 +10,7 @@ include(cmake/protobuf.cmake)
 
 
 include_directories( src/core src/lokocv src/lokoutils src/lokomanage src/lokoserver 
-                    src/lokoprotobuf src/lokobook)
+                    src/lokoprotobuf src/lokobook include)
 link_directories(/usr/local/lib )
 
 add_subdirectory(src)

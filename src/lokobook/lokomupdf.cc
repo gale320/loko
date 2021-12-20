@@ -4,6 +4,7 @@ namespace loko{
 
 LokoMupdf::LokoMupdf():zoom(100),rotate(0),page_number(1)
 {
+	version = FZ_VERSION;
     ctx = fz_new_context(NULL, NULL, FZ_STORE_UNLIMITED);
 	if (!ctx)
 	{

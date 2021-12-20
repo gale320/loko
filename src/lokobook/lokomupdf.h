@@ -23,6 +23,7 @@ class LokoMupdf{
         fz_outline * outline;
         fz_matrix ctm;    
         float zoom, rotate;
+        std::string version;
         
 };
 
