@@ -1,6 +1,7 @@
 #pragma once
 
 #include <mupdf/fitz.h>
+#include "mupdf/pdf.h"
 #include "lokoinc.h"
 #include <stdlib.h>
 
