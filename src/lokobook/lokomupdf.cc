@@ -104,4 +104,16 @@ bool LokoMupdf::GetPage(int num)
     return ret;
 }
 
+bool LokoMupdf::GetPageData(LokoBuf * buf)
+{
+	bool ret = false;
+	
+	buf->width = fz_pixmap_width(ctx, pix);
+	buf->height = fz_pixmap_height(ctx, pix);
+	buf->stride = pix->stride;
+	buf->data = pix->samples;
+
+	return ret;
+}
+
 }

@@ -9,4 +9,8 @@
 
 namespace loko{
 
+
+bool CvMat2QImage(const cv::Mat& mat, QImage &image1);
+bool  QImage2cvMat(QImage& image, cv::Mat &mat);
+
 }

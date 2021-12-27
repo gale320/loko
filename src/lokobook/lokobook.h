@@ -4,6 +4,7 @@
 #include "lokotype.h"
 #include "lokoutils.h"
 #include "lokostatus.h"
+#include "lokocmd.h"
 
 namespace loko {
 

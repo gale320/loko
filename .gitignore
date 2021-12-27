@@ -2,6 +2,7 @@
 *.d
 build/*
 .vscode
+qtapp/build-lokoapp-Desktop-Debug
 
 # Compiled Object files
 *.slo

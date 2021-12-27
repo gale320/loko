@@ -3,6 +3,7 @@
 #include <mupdf/fitz.h>
 #include "mupdf/pdf.h"
 #include "lokoinc.h"
+#include "lokobuf.h"
 #include <stdlib.h>
 
 namespace loko{
@@ -14,6 +15,7 @@ class LokoMupdf{
         bool SetFile(std::string str);
         bool Open();
         bool GetPage(int num);
+        bool GetPageData(LokoBuf * buf);
 
     private:
         std::string filename;

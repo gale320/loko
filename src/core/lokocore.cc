@@ -21,6 +21,15 @@ bool LokoCore::Handle(std::string str)
     return ret;
 }
 
+bool LokoCore::Handle(std::string str, LokoBuf, LokoBuf * buf1)
+{
+    bool ret = false;
+    buf = buf1;
+    ret = Handle(str);
+    return ret;
+}
+
+
 bool LokoCore::Handle(LokoCmd * cmd)
 {
     bool ret = false;
@@ -31,6 +40,16 @@ bool LokoCore::Handle(LokoCmd * cmd)
         std::string str1 = cmd->GetCmd();
         mupdf->SetFile(str1);
         mupdf->Open();
+    }
+    else if(cmdStr == "getpage")
+    {
+        std::string str1 = cmd->GetCmd();
+        ret = mupdf->GetPage(std::stoi(str1));
+    }
+    else if(cmdStr == "getdata")
+    {
+        std::string str1 = cmd->GetCmd();
+        ret = mupdf->GetPage(std::stoi(str1));
     }
     else 
     {
